@@ -8,7 +8,7 @@
 /* Optional: Adjust other colors to complement the accent */
 :root {
   --background: #242424;
-  --foreground: #e0e0e0;
+  --foreground: #e6f7ff;
   --terminal-color: var(--accent);
 }
 
