@@ -1,13 +1,13 @@
 /* Custom color scheme for VWH Consultancy */
 :root {
-  --accent: rgb(145, 213, 255);
+  --accent: #91d5ff;
   --accent-light: color-mix(in srgb, var(--accent) 30%, white);
   --accent-dark: color-mix(in srgb, var(--accent) 70%, black);
 }
 
 /* Optional: Adjust other colors to complement the accent */
 :root {
-  --background: #0c0c0c;
+  --background: #242424;
   --foreground: #e0e0e0;
   --terminal-color: var(--accent);
 }
