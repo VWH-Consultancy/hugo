@@ -20,4 +20,4 @@ We deliver projects on time and on budget.
 
 **Contact**:  
 71–75 Shelton Street, Covent Garden, London WC2H 9JQ  
-Email: contact@vwh-consultancy.com
+Email: <vwhconsultancy@outlook.com>
