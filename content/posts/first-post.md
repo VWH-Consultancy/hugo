@@ -4,7 +4,7 @@ date: 2025-01-20
 draft: false
 tags: ["announcement", "website", "update"]
 cover: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-summary: "We're excited to launch our new website built with Hugo, hosted on GitHub Pages, and using the Terminal theme."
+summary: "We're excited to launch our new blog built with Hugo, hosted on GitHub Pages, and using the Terminal theme."
 ---
 
 # Welcome to Our New Website!
@@ -17,7 +17,7 @@ This site is built with [Hugo](https://gohugo.io) and hosted on [GitHub Pages](h
 
 ## Thanks to the Terminal Theme
 
-For the design, we’re using the [Terminal theme](https://github.com/panr/hugo-theme-terminal) by **panr**. We love its clean, retro aesthetic, excellent readability, and responsive layout. A huge thank you to panr for creating and maintaining this beautiful open‑source theme.
+We’re using the [Terminal theme](https://github.com/panr/hugo-theme-terminal) by **panr**. A huge thank you to panr for creating and maintaining this beautiful open‑source theme.
 
 ## What’s Next
 
