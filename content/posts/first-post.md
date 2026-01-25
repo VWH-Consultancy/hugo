@@ -3,7 +3,6 @@ title: "Welcome to Our New Sidesite"
 date: 2025-01-20
 draft: false
 tags: ["announcement", "website", "update"]
-cover: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 summary: "We're excited to launch our new blog built with Hugo, hosted on GitHub Pages, and using the Terminal theme."
 ---
 
