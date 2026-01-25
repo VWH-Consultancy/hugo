@@ -4,23 +4,20 @@ date: 2025-01-20
 draft: false
 ---
 
-# About VWH Consultancy
+We implement technologies and digital transformations that drive growth for your industry. With experience, tools, and interdisciplinary expertise, we deliver impactful design and technology patterns. As a premier bespoke development company for full‑stack and cloud‑deployed solutions, we automate processes and unite teams seamlessly. Our team brings a decade of experience in mobile, backend, and frontend development, collaborating to realize bold ideas.
 
-Welcome to VWH Consultancy, a premier consulting firm dedicated to helping businesses achieve their strategic goals through innovative solutions and expert guidance.
+This little site serves as a blog to keep track of our projects, articles, and insights. Read all posts [here](/posts).
 
-## Our Mission
+**Services**:
+- Software Architecture Design
+- DevOps & CI/CD
+- ERP Software Development
+- Application Development
+- Integration Services
+- Legacy System Modernization
 
-To empower organizations with the knowledge, tools, and strategies needed to thrive in today's competitive landscape.
+We deliver projects on time and on budget.
 
-## Our Values
-
-- **Integrity**: We believe in transparent, honest partnerships
-- **Excellence**: We deliver exceptional quality in everything we do
-- **Innovation**: We embrace new ideas and technologies
-- **Collaboration**: We work closely with our clients as true partners
-
-## Our Team
-
-Our team consists of experienced professionals with diverse backgrounds in business strategy, technology, finance, and operations. Together, we bring decades of collective experience to every engagement.
-
-Founded in 2020, VWH Consultancy has helped over 100 clients across various industries transform their businesses and achieve sustainable growth.
+**Contact**:  
+71–75 Shelton Street, Covent Garden, London WC2H 9JQ  
+Email: contact@vwh-consultancy.com

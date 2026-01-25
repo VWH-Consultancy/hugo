@@ -1,0 +1,27 @@
+# Git
+.git
+.gitmodules
+.gitignore
+
+# Hugo build artifacts
+public/
+resources/
+.hugo_build.lock
+
+# Node modules (if any)
+node_modules/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+tmp/
+*.tmp

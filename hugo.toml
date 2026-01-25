@@ -19,6 +19,7 @@ pagination.pagerSize = 5
   autoCover = true
   showLastUpdated = false
   readingTime = false
+  ReadMore = "Read more"
 
 [languages]
   [languages.en]
@@ -40,10 +41,6 @@ pagination.pagerSize = 5
         name = "About"
         url = "/about"
       [[languages.en.menu.main]]
-        identifier = "services"
-        name = "Services"
-        url = "/services"
-      [[languages.en.menu.main]]
-        identifier = "contact"
-        name = "Contact"
-        url = "/contact"
+        identifier = "posts"
+        name = "Posts"
+        url = "/posts"
