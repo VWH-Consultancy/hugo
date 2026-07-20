@@ -12,7 +12,7 @@ This guide walks through building and securing a TypeScript Node.js Express API 
 
 A complete working example of the finished project is also available on GitHub. It demonstrates a fully functioning implementation of the concepts covered in this guide and can be used as a reference alongside the tutorial.
 
-**Example Project:** https://github.com/myzticx/TestSecuredNodeServerTS
+**Example Project:** https://github.com/VWH-Consultancy/TestSecuredNodeServerTS
 
 ---
 
