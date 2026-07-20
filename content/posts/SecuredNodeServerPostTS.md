@@ -6,6 +6,8 @@ tags: [""]
 summary: "In this guide, we will walk through creating a TypeScript Node.js server and securing it using Docker, Keycloak and Client Credentials."
 ---
 
+A few days ago I put together a guide on locking down a Node.js Express API with Keycloak using plain JavaScript. This is the TypeScript companion. Same battle-tested Keycloak setup, same Client Credentials flow, same `docker-compose.yml` - just with strict types, proper `tsconfig` compilation, and all the modern ergonomics. If you've been meaning to add machine-to-machine auth to your API but wanted it in TS, this walks through every step end to end.
+
 This guide walks through building and securing a TypeScript Node.js Express API using Docker, Keycloak and the OAuth 2.0 Client Credentials flow.
 
 A complete working example of the finished project is also available on GitHub. It demonstrates a fully functioning implementation of the concepts covered in this guide and can be used as a reference alongside the tutorial.
@@ -509,3 +511,4 @@ After completing this guide you will have:
 - JWT authentication using the OAuth 2.0 Client Credentials flow.
 - A protected API endpoint that only accepts valid Bearer tokens.
 - Automatic rejection of unauthorised requests with **401 Unauthorized**.
+
