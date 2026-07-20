@@ -1,19 +1,26 @@
-# Hugo development container for Podman/Docker using Alpine Linux
-# Build: podman build -t hugo-dev .
-# Run: podman run -p 1313:1313 -v $(pwd):/site hugo-dev
+# Hugo development container for Docker using Ubuntu
+# Build: docker build -t hugo .
+# Run: docker run -p 1313:1313 -v $(pwd):/site hugo
 
 FROM mcr.microsoft.com/devcontainers/base:ubuntu-22.04 AS builder
 
 # Install dependencies
-RUN apk add --no-cache \
+RUN apt-get update && apt-get install -y \
     git \
     wget \
-    ca-certificates
+    ca-certificates \
+    && rm -rf /var/lib/apt/lists/*
 
-# Install Hugo extended (static binary)
+# Install Hugo extended (static binary) - detect architecture
 ARG HUGO_VERSION=0.154.5
-RUN wget -O /tmp/hugo.tar.gz \
-    "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz" && \
+RUN ARCH=$(uname -m) && \
+    case "$ARCH" in \
+        x86_64) HUGO_ARCH="64bit" ;; \
+        aarch64|arm64) HUGO_ARCH="arm64" ;; \
+        *) echo "Unsupported architecture: $ARCH"; exit 1 ;; \
+    esac && \
+    wget -O /tmp/hugo.tar.gz \
+    "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-${HUGO_ARCH}.tar.gz" && \
     tar -xzf /tmp/hugo.tar.gz -C /tmp && \
     mv /tmp/hugo /usr/local/bin/hugo && \
     rm -rf /tmp/hugo.tar.gz /tmp/LICENSE /tmp/README.md

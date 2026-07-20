@@ -6,7 +6,9 @@ tags: [""]
 summary: "In this guide, we will walk through creating a Node.js server and securing it using Docker, Keycloak and Client Credentials."
 ---
 
-This guide walks through building and securing a Node.js Express API using Docker, Keycloak and the OAuth 2.0 Client Credentials flow.
+I’ve been burned enough times by hosted auth providers that wanted per-seat pricing before I’d even shipped, so I started looking for a self-hosted solution that wouldn’t lock me into opaque pricing. After implementing OIDC across several projects, each with different libraries and quirks, I landed on Keycloak. It’s battle tested, it’s free, and it gives you a real playground to understand the guts of OAuth without reaching for a credit card. If you’re building an internal API that needs machine-to-machine authentication (the classic Client Credentials flow), Keycloak gets out of your way once it’s set up.
+
+Here’s the exact path I followed to spin up a Node.js Express API, lock it down with JWT validation, and let Keycloak handle the token issuance, all running in Docker.
 
 A complete working example of the finished project is also available on GitHub. It demonstrates a fully functioning implementation of the concepts covered in this guide and can be used as a reference alongside the tutorial.
 
