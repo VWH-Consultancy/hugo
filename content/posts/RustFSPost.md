@@ -3,10 +3,12 @@ title: "Creating a Node.js S3 CRUD Application using RustFS and Docker"
 date: 2026-07-20
 draft: false
 tags: [""]
-summary: "In this guide, we will walk through creating a Node.js application that performs S3 CRUD operations using RustFS running locally with Docker."
+summary: "In this post, we will walk through creating a Node.js application that performs S3 CRUD operations using RustFS running locally with Docker."
 ---
 
-This guide walks through creating a Node.js application that communicates with a local S3-compatible storage service using RustFS.
+Every business that moves data around eventually needs somewhere to put it, and ETL almost always lands in the same place: object storage, because the S3 API won. This post builds the smallest version of that skill. You'll run RustFS, a local S3-compatible object store, in Docker and wire a Node.js client to it with the AWS SDK, then create, read, update, and delete objects. No AWS account required.
+
+This post walks through creating a Node.js application that communicates with a local S3-compatible storage service using RustFS.
 
 RustFS provides an S3-compatible API that allows applications to store, read, update and delete objects using the same concepts as Amazon S3.
 
@@ -18,7 +20,7 @@ The finished project will demonstrate:
 - Separating the application into client, CRUD and application files.
 - Performing Create, Read, Update and Delete operations.
 
-Everything in this guide runs locally and does not require an AWS account.
+Everything in this post runs locally and does not require an AWS account.
 
 **Example Project:** https://github.com/myzticx/RustFsNodeDemo
 
@@ -170,11 +172,11 @@ Open your browser:
 http://localhost:9001
 ```
 
-Login using:
+Login using the access key credentials:
 
 ```
-Username: admin
-Password: password123
+Account: admin
+Key: password123
 ```
 
 These credentials were created in the Docker Compose file.
@@ -397,7 +399,7 @@ async function upload() {
       }),
     );
 
-    console.log("Upload complete");
+    console.log("✅ Upload complete");
   } catch (err) {
     console.error(err);
   }
@@ -432,7 +434,7 @@ async function update() {
       }),
     );
 
-    console.log("Update complete");
+    console.log("✅ Updated");
   } catch (err) {
     console.error(err);
   }
@@ -448,7 +450,7 @@ async function remove() {
       }),
     );
 
-    console.log("Delete complete");
+    console.log("✅ Deleted");
   } catch (err) {
     console.error(err);
   }
@@ -631,7 +633,7 @@ node app.js upload
 Expected output:
 
 ```text
-Upload complete
+✅ Upload complete
 ```
 
 This creates:
@@ -682,7 +684,7 @@ node app.js update
 Expected output:
 
 ```text
-Update complete
+✅ Updated
 ```
 
 The contents of:
@@ -718,7 +720,7 @@ node app.js delete
 Expected output:
 
 ```text
-Delete complete
+✅ Deleted
 ```
 
 The object is removed from:
@@ -742,16 +744,22 @@ Example output:
 ```text
 [
   {
-    Key: "hello.txt"
+    Key: 'hello.txt',
+    LastModified: 2026-09-06T18:35:15.937Z,
+    ETag: '"82116f73981dd06d9bfcac4bc2005d28"',
+    Size: 21,
+    StorageClass: 'STANDARD'
   }
 ]
 ```
+
+The exact `LastModified`, `ETag` and `Size` values will differ. If the bucket is empty, `list` prints `undefined` because `response.Contents` does not exist.
 
 ---
 
 # Step 15 - Complete Project Structure
 
-After completing the guide, the final project structure should look like:
+After completing the post, the final project structure should look like:
 
 ```text
 rustfs-node-demo/
@@ -766,6 +774,8 @@ rustfs-node-demo/
 ├── crud.js
 └── s3Client.js
 ```
+
+> The example project at https://github.com/myzticx/RustFsNodeDemo keeps `docker-compose.yml` and the Node.js files together in a single folder. This post separates them into `rustfs/` and `rustfs-node-demo/` for clarity; either layout works.
 
 ---
 
@@ -918,7 +928,7 @@ password123
 
 # Expected Outcome
 
-After completing this guide you will have:
+After completing this post you will have:
 
 - RustFS running locally using Docker.
 - A Node.js application connected using the AWS S3 SDK.
