@@ -3,12 +3,14 @@ title: "Creating a TypeORM + TypeScript + PostgreSQL + Docker Demo"
 date: 2026-09-02
 draft: false
 tags: [""]
-summary: "In this guide, we will walk through creating a TypeORM + TypeScript + PostgreSQL + Docker Demo."
+summary: "In this post, we will walk through creating a TypeORM + TypeScript + PostgreSQL + Docker Demo."
 ---
 
-This guide walks through creating a TypeORM + TypeScript + PostgreSQL + Docker Project.
+Every app that has to remember anything ends up talking to a database, and no one wants to write raw SQL strings for every query. ORMs exist to bridge that gap: they map tables to classes and rows to objects, so your code works in types instead of `SELECT` statements. You see them in web apps, APIs, and internal tools, anywhere structured data is read and written. TypeORM is one of these, and pairing it with TypeScript hands the whole data layer to developers who already think in types. Same language on both ends, with the compiler catching your mistakes before the database does.
 
-A complete working example of the finished project is also available on GitHub. It demonstrates a fully functioning implementation of the concepts covered in this guide and can be used as a reference alongside the tutorial.
+This post walks through creating a TypeORM + TypeScript + PostgreSQL + Docker Project.
+
+A complete working example of the finished project is also available on GitHub. It demonstrates a fully functioning implementation of the concepts covered in this post and can be used as a reference alongside the tutorial.
 
 **Example Project:** https://github.com/myzticx/TypeormPostgresDemo
 
@@ -16,7 +18,7 @@ A complete working example of the finished project is also available on GitHub. 
 
 ## 1. What you will build
 
-By the end of this guide, your application will work like this:
+By the end of this post, your application will work like this:
 
 ```text
 TypeScript application
@@ -883,23 +885,22 @@ Connected to PostgreSQL!
 
 --- INSERT ---
 User inserted: User {
-  id: 2,
+  id: 1,
   name: 'Jane Smith',
   email: 'jane-xxxxxxxx@example.com',
   age: 20
 }
 
 --- QUERY ---
-┌─────────┬────┬──────────────┬────────────────────────────┬─────┐
-│ (index) │ id │ name         │ email                      │ age │
-├─────────┼────┼──────────────┼────────────────────────────┼─────┤
-│ 0       │ 1  │ John Updated │ john@example.com            │ 18  │
-│ 1       │ 2  │ Jane Smith   │ jane-xxxxxxxx@example.com   │ 20  │
-└─────────┴────┴──────────────┴────────────────────────────┴─────┘
+┌─────────┬────┬──────────────┬─────────────────────────────┬─────┐
+│ (index) │ id │ name         │ email                       │ age │
+├─────────┼────┼──────────────┼─────────────────────────────┼─────┤
+│ 0       │ 1  │ 'Jane Smith' │ 'jane-xxxxxxxx@example.com' │ 20  │
+└─────────┴────┴──────────────┴─────────────────────────────┴─────┘
 
 --- UPDATE ---
 User updated: User {
-  id: 2,
+  id: 1,
   name: 'Jane Updated',
   email: 'jane-xxxxxxxx@example.com',
   age: 21
@@ -909,7 +910,7 @@ User updated: User {
 ...
 
 --- DELETE ---
-User 2 deleted
+User 1 deleted
 
 --- QUERY ---
 ...
