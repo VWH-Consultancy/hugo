@@ -12,7 +12,7 @@ Here’s the exact path I followed to spin up a Node.js Express API, lock it dow
 
 A complete working example of the finished project is also available on GitHub. It demonstrates a fully functioning implementation of the concepts covered in this guide and can be used as a reference alongside the tutorial.
 
-**Example Project:** https://github.com/myzticx/TestSecuredNodeServer
+**Example Project:** https://github.com/VWH-Consultancy/TestSecuredNodeServer
 
 ---
 
