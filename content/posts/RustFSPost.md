@@ -22,7 +22,7 @@ The finished project will demonstrate:
 
 Everything in this post runs locally and does not require an AWS account.
 
-**Example Project:** https://github.com/myzticx/RustFsNodeDemo
+**Example Project:** https://github.com/VWH-Consultancy/RustFsNodeDemo
 
 ---
 
@@ -775,7 +775,7 @@ rustfs-node-demo/
 └── s3Client.js
 ```
 
-> The example project at https://github.com/myzticx/RustFsNodeDemo keeps `docker-compose.yml` and the Node.js files together in a single folder. This post separates them into `rustfs/` and `rustfs-node-demo/` for clarity; either layout works.
+> The example project at https://github.com/VWH-Consultancy/RustFsNodeDemo keeps `docker-compose.yml` and the Node.js files together in a single folder. This post separates them into `rustfs/` and `rustfs-node-demo/` for clarity; either layout works.
 
 ---
 

@@ -12,7 +12,7 @@ This post walks through creating a TypeORM + TypeScript + PostgreSQL + Docker Pr
 
 A complete working example of the finished project is also available on GitHub. It demonstrates a fully functioning implementation of the concepts covered in this post and can be used as a reference alongside the tutorial.
 
-**Example Project:** https://github.com/myzticx/TypeormPostgresDemo
+**Example Project:** https://github.com/VWH-Consultancy/TypeormPostgresDemo
 
 ---
 
